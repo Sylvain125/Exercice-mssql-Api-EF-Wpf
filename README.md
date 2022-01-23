@@ -15,7 +15,6 @@ Conversion des Entity en Dto (Persistance) puis en Model pour l'api et le WPF.
 Création du client WPF.  
 Binding des informations de la base de données sur les champs du WPF.  
 Le champ Id est "limité", on ne peu y taper que des chiffres.  
-Si les chiffres sont supérieurs au nombres d'entrées compté en base de données, il "reset" tous les champs évitant ainsi les erreurs de saisie.
 
 
 
