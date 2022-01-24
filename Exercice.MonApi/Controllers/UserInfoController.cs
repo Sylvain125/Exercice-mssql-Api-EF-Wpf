@@ -11,12 +11,17 @@ namespace Exercice.MonApi.Controllers
     [ApiController]
     public class UserInfoController : ControllerBase
     {
-        private MonApiContext _context;
+       // private MonApiContext _context { get; set; }
         private IMapper _mapper;
-        public UserInfoController(MonApiContext context, IMapper mapper)
+
+        private readonly IGeneriqueRepo<UserInfoEntity> _userRepository;
+
+        private readonly ILogger<UserInfoController> _logger;
+        public UserInfoController(IGeneriqueRepo<UserInfoEntity> userRepository, IMapper mapper, ILogger<UserInfoController> logger)
         {
-            _context = context;
+            //_context = context;
             _mapper = mapper;
+            _logger = logger;
         }
 
         // GET: api/<ApiController>
@@ -25,7 +30,8 @@ namespace Exercice.MonApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get()
         {
-            return Ok(_context.UserInfosEntity.Select(user => _mapper.Map<UserInfoDto>(user)));
+            var plop = _userRepository. _context.UserInfosEntity.Select(user => _mapper.Map<UserInfoDto>(user));
+            return Ok(plop);
         }
 
         // GET api/<ApiController>/5

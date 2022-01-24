@@ -1,4 +1,5 @@
 using Exercice.MonApi;
+using Exercice.Persistance;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,8 @@ builder.Services.AddAutoMapper(typeof(UserInfoProfileApi));
 builder.Services.AddDbContext<MonApiContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultContext")));
 
+builder.Services.AddScoped(typeof(IGeneriqueRepo<>), typeof(DbGeneriqueRepo<>));
+builder.Services.AddScoped<DbContext, MonApiContext>();
 
 // Partage etat entre tous les utilisateurs( thread safe)
 // builder.Services.AddSingleton< Irepository, DbContext>();
@@ -38,6 +41,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<MonApiContext>();
+
 
     // Le Ensute Creer la Db si pas deja existante
     context.Database.EnsureCreated();

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice.MonApi", "Exercice.MonApi\Exercice.MonApi.csproj", "{5622EC54-7F49-4339-8916-B88830EB986B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice.MonApi", "Exercice.MonApi\Exercice.MonApi.csproj", "{5622EC54-7F49-4339-8916-B88830EB986B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice.Model", "Exercice.Model\Exercice.Model.csproj", "{3060D528-C927-42F8-AC21-9C984087BD17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice.Model", "Exercice.Model\Exercice.Model.csproj", "{3060D528-C927-42F8-AC21-9C984087BD17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice.Dto", "Exercice.Dto\Exercice.Dto.csproj", "{63806C75-79C2-411B-9162-81C84AF92902}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice.Dto", "Exercice.Dto\Exercice.Dto.csproj", "{63806C75-79C2-411B-9162-81C84AF92902}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice.Persistance", "Exercice.Persistance\Exercice.Persistance.csproj", "{4EE1FADC-96DE-4188-A1EB-168E99BCE3D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice.Persistance", "Exercice.Persistance\Exercice.Persistance.csproj", "{4EE1FADC-96DE-4188-A1EB-168E99BCE3D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice.Wpf", "Exercice.Wpf\Exercice.Wpf.csproj", "{C64A6701-0C3F-4C23-9057-BCEEC37439AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice.Wpf", "Exercice.Wpf\Exercice.Wpf.csproj", "{C64A6701-0C3F-4C23-9057-BCEEC37439AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice.Test", "Exercice.Test\Exercice.Test.csproj", "{E190117C-C401-43C9-A311-F9F5479DD64F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C64A6701-0C3F-4C23-9057-BCEEC37439AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C64A6701-0C3F-4C23-9057-BCEEC37439AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C64A6701-0C3F-4C23-9057-BCEEC37439AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E190117C-C401-43C9-A311-F9F5479DD64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E190117C-C401-43C9-A311-F9F5479DD64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E190117C-C401-43C9-A311-F9F5479DD64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E190117C-C401-43C9-A311-F9F5479DD64F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

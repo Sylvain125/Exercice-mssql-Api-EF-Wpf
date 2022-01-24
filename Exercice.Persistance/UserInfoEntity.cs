@@ -4,12 +4,15 @@ using System.Runtime.Serialization;
 
 namespace Exercice.Persistance
 {
+
     [Table("UserInfo")]
+
     public class UserInfoEntity
     {
+
         [Key, DataMember]
         [Column("UserInfoId")]
-        [Required, StringLength(20)]
+        [Required, MaxLength(20)]
         public int UserId { get; set; }
         
 
@@ -38,8 +41,11 @@ namespace Exercice.Persistance
         [Column("Phone")]
         [StringLength(100)]
         public string Phone { get; set; }
-        
 
+        public UserInfoEntity()
+        {
+
+        }
         public UserInfoEntity(int userId, string userFirstName, string userLastName, string emailAddress, string companyName, string phone)
         {
             UserId = userId;
@@ -49,5 +55,6 @@ namespace Exercice.Persistance
             CompanyName = companyName;
             Phone = phone;
         }
+
     }
 }
